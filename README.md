@@ -21,7 +21,7 @@ A SwiftUI-based iOS app for managing and organizing your favorite recipes suppor
 - **Detailed View**: See complete recipe information including ingredients and step-by-step directions
 - **Live Calorie Data**: Automatic calorie calculation using the Edamam Nutrition API
 - **Shopping List**: Create shopping lists from your recipes
-- **Stores Nearby**: Use Core Location to show nearby grocery stores to shop
+- **Stores Nearby**: Use `CoreLocation` to show nearby grocery stores to shop
 - **Core Data Integration**: Persistent local storage for all your recipes
 
 ## Calorie Calculation
