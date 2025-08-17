@@ -19,17 +19,23 @@ A SwiftUI-based iOS app for managing and organizing your favorite recipes suppor
 - **Recipe Storage**: Save recipes with ingredients, directions, and serving information
 - **Recipe Browsing**: View all your recipes in an organized list
 - **Detailed View**: See complete recipe information including ingredients and step-by-step directions
-- **Shopping List**: Generate shopping lists from your recipes
+- **Live Calorie Data**: Automatic calorie calculation using the Edamam Nutrition API
+- **Shopping List**: Create shopping lists from your recipes
+- **Stores Nearby**: Use Core Location to show nearby grocery stores to shop
 - **Core Data Integration**: Persistent local storage for all your recipes
 
-## Screenshots
+## Calorie Calculation
 
-The app includes:
-- Welcome screen with app branding
-- Recipe list view showing all saved recipes
-- Add recipe form with fields for name, servings, ingredients, and directions
-- Detailed recipe view for viewing complete recipe information
-- Shopping list functionality
+Recipe calories are automatically calculated using the [Edamam Nutrition Analysis API](https://developer.edamam.com/edamam-nutrition-api). The calculation process works as follows:
+
+1. **Ingredient Processing**: When viewing a recipe, the app extracts individual ingredients from the recipe's ingredient list by splitting on newlines and trimming whitespace
+2. **API Request**: The processed ingredients are sent as a JSON payload to the Edamam API nutrition-details endpoint
+3. **Nutritional Analysis**: The API analyzes each ingredient quantity and type, returning comprehensive nutritional data including total calories for the entire recipe
+4. **Real-time Display**: The calculated calories appear automatically in the recipe detail view when the API response is received
+
+The calorie calculation is triggered automatically when a user opens a recipe's detailed view (`RecipeDetailedView.swift:130`). The API leverages the USDA food database to provide accurate nutritional analysis.
+
+**Note**: An active internet connection is required for calorie calculation as it relies on the external Edamam API service.
 
 ## Requirements
 
