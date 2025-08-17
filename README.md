@@ -1,6 +1,18 @@
 # Recipe Manager
 
-A SwiftUI-based iOS app for managing and organizing your favorite recipes.
+A SwiftUI-based iOS app for managing and organizing your favorite recipes supporting live calorie data.
+
+## Demo
+
+<p align="center">
+  <img src="screenshots/home.png" alt="Screenshot 1" width="18%"/>
+  <img src="screenshots/recipe.png" alt="Screenshot 2" width="18%"/>
+  <img src="screenshots/new_recipe.png" alt="Screenshot 3" width="18%"/>
+  <img src="screenshots/shopping_list.png" alt="Screenshot 4" width="18%"/>
+  <img src="screenshots/map.png" alt="Screenshot 5" width="18%"/>
+</p>
+
+---
 
 ## Features
 
@@ -56,13 +68,9 @@ The app uses Core Data for persistent storage with a `Recipe` entity containing:
 ## Sample Data
 
 The app includes sample recipes for testing:
-- Grilled Cheese
-- Oatmeal
-- Green Smoothie
 - Greek Salad
-- Spaghetti Carbonara
-- Chocolate Pancakes
-
-## Author
-
-Created by Saketh Pabolu
+- Chocolate Pancake
+- Grilled Cheese
+- Pasta
+- Mug Pizza
+- Scrambled Eggs
